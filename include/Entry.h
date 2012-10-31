@@ -17,4 +17,4 @@ private:
 	string name;
 	double x;
 	double y;
-}
+};

@@ -25,7 +25,7 @@ Entry* HW04App::readInFile(){
 	double x,y;
 	ifstream myFile("Starbucks_2006.csv");
 	int sizeOfFile=7655;
-
+	myFile.open("../resources/Starbucks_2006.csv");
 	Entry* arr=new Entry[sizeOfFile];
 	for(int i=0; i<sizeOfFile; ++i){
 			getline(myFile, line, ',');
@@ -37,6 +37,8 @@ Entry* HW04App::readInFile(){
 			y = atof(line.c_str());
 			arr[i].y = y;
 	}
+	cout <<"read in file"<<endl;
+	myFile.close();
 	return arr;
 }
 
@@ -44,7 +46,7 @@ void HW04App::setup()
 {
 	mccantjtStarbucks* myDataType=new mccantjtStarbucks();
 	Entry* myStarbucks=readInFile();
-	Entry* nearestLoc;
+	Entry* nearestLoc=new Entry();
 
 	myDataType->build(myStarbucks, 7655);
 	nearestLoc=myDataType->getNearest(.3,.3);

@@ -15,7 +15,7 @@ mccantjtStarbucks::mccantjtStarbucks(){
 }
 //Currently builds with all starbucks, needs to be modified to exclude starbucks that are too close, see Starbucks.h
 void mccantjtStarbucks::build(Entry* c, int n){
-	Entry* starbucks=new Entry[n];
+	starbucks=new Entry[n];
 	for(int i=0; i<n; ++i){
 		starbucks[i]=c[i];
 	}

@@ -9,4 +9,4 @@ public:
 	virtual Entry* getNearest(double x, double y);
 	Entry* starbucks;
 	int size;
-}
+};
