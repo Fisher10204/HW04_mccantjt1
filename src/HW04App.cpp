@@ -1,3 +1,5 @@
+// Jacob McCanty
+
 #pragma once
 #include "cinder/app/AppBasic.h"
 #include "cinder/gl/gl.h"
@@ -49,7 +51,7 @@ void HW04App::setup()
 	Entry* nearestLoc=new Entry();
 
 	myDataType->build(myStarbucks, 7655);
-	nearestLoc=myDataType->getNearest(.3,.3);
+	nearestLoc=myDataType->getNearest(.75,.25);
 	HW04App::console() << nearestLoc->identifier << std::endl;
 }
 

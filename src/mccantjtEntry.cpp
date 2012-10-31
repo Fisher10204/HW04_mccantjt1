@@ -1,3 +1,5 @@
+//Jacob McCanty
+
 #pragma once
 #include "Entry.h"
 #include <string>
