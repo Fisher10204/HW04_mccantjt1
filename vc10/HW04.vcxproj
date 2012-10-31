@@ -105,9 +105,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\src\HW04App.cpp" />
+    <ClCompile Include="..\src\mccantjtEntry.cpp" />
+    <ClCompile Include="..\src\mccantjtStarbucks.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\..\Desktop\HW04StarterFiles\Starbucks.h" />
+    <ClInclude Include="..\include\Entry.h" />
+    <ClInclude Include="..\include\mccantjtStarbucks.h" />
     <ClInclude Include="..\include\Resources.h" />
   </ItemGroup>
   <ItemGroup>
