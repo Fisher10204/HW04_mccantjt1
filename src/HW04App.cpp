@@ -7,6 +7,7 @@
 #include "cinder/ImageIo.h"
 #include "Starbucks.h"
 #include "mccantjtStarbucks.h"
+#include "Resources.h"
 #include "cinder/Rand.h"
 #include <fstream>
 #include <cstdlib>
@@ -22,6 +23,13 @@ class HW04App : public AppBasic {
 	void update();
 	void draw();
 	Entry* readInFile();
+private:
+	Surface* mySurface;
+	static const int appWidth=800;
+	static const int appHeight=800;
+	static const int surfaceSize=1024;
+	void drawImage(uint8_t* surface, uint8_t* image);
+	gl::Texture usPic;
 };
 
 Entry* HW04App::readInFile(){
@@ -48,6 +56,9 @@ Entry* HW04App::readInFile(){
 
 void HW04App::setup()
 {
+	mySurface=new Surface(surfaceSize,surfaceSize,false);
+	usPic=gl::Texture(loadImage(loadResource(RES_US_PIC, "IMAGE")));
+	
 	mccantjtStarbucks* myDataType=new mccantjtStarbucks();
 	Entry* myStarbucks=readInFile();
 	Entry* nearestLoc=new Entry();
@@ -68,7 +79,7 @@ void HW04App::update()
 void HW04App::draw()
 {
 	// clear out the window with black
-	gl::clear( Color( 0, 0, 0 ) ); 
+	gl::draw(usPic,getWindowBounds());
 }
 
 CINDER_APP_BASIC( HW04App, RendererGl )
