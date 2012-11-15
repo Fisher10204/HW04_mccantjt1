@@ -115,6 +115,8 @@
     <ClInclude Include="..\include\Resources.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\..\..\..\Desktop\HW04StarterFiles\Census_2000.csv" />
+    <None Include="..\..\..\..\..\Desktop\HW04StarterFiles\Census_2010.csv" />
     <None Include="..\..\..\..\..\Desktop\HW04StarterFiles\Starbucks_2006.csv" />
     <None Include="..\..\..\..\..\Desktop\usa3.jpg" />
   </ItemGroup>

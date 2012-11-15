@@ -10,11 +10,15 @@ mccantjtEntry::mccantjtEntry(){
 	y=-1.0;
 	name="";
 }
-
-mccantjtEntry::mccantjtEntry(string new_name, double x2, double y2){
+//use for census info
+mccantjtEntry::mccantjtEntry(int stateID2, int countyID2, int censusID2, int groupID2, int population2, double x2, double y2){
 	x=x2;
 	y=y2;
-	name=new_name;
+	stateID=stateID2;
+	countyID=countyID2;
+	censusID=censusID2;
+	groupID=groupID2;
+	population=population2;
 }
 
 double mccantjtEntry::getX()

@@ -46,6 +46,12 @@
     <None Include="..\..\..\..\..\Desktop\usa3.jpg">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="..\..\..\..\..\Desktop\HW04StarterFiles\Census_2000.csv">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\..\..\..\Desktop\HW04StarterFiles\Census_2010.csv">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\resources\Resources.rc">
